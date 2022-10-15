@@ -127,7 +127,7 @@ def email_validation(contacts=None):
     return checked_mails
 
 if __name__ == '__main__':
-    contacts = read_excel(File_Name = "Zoho Validated List.xlsx", Sheet_Name = "Zoho List")
+    contacts = read_excel(File_Name = "Filename.xlsx", Sheet_Name = "Email List")
     print(contacts)
     for contact in contacts:
         print(f"Sending mail to {contact}")
