@@ -65,7 +65,7 @@ def read_spambox():
     mail.logout()
     return message
 #Delete the mails to clear the inbox
-def delete_inbox():
+def delete_spambox():
     mail = imaplib.IMAP4_SSL('imap.gmail.com')
     mail.login(mail_id, pwd)
     mail.select("[Gmail]/Spam")
@@ -80,7 +80,7 @@ def delete_inbox():
     mail.logout()
     return "All the mails in inbox are deleted"
 #delete spam box
-def delete_spambox():
+def delete_inbox():
     mail = imaplib.IMAP4_SSL('imap.gmail.com')
     mail.login(mail_id, pwd)
     mail.select("Inbox")
@@ -109,7 +109,7 @@ def delete_sentbox():
     mail.close()
     mail.logout()
     return "All the mails in sent box are deleted"
-#Validate the retrieved
+#Validate the retrieved mails
 def email_validation(contacts=None):
     returned_message1 = read_inbox()
     returned_message2 = read_spambox()
