@@ -1,19 +1,11 @@
-Info:
-Email validator validates the Mail IDs of the prospects by sending them an automated mail and detecting the hard bounces.
+# Email--Validator
 
-Libraries used:
-1.Pandas
-2.os
-3.Openpyxl
-4.smtplib
-5.imaplib
-6.time
-7.email
+The Email Validator is a tool that validates the email addresses of prospects by sending an automated email and detecting hard bounces. The libraries used in this tool include Pandas, os, Openpyxl, smtplib, imaplib, time, and email.
 
-Process:
-1. Initially for sending the mails sender account needs to be set-that may be of any account(gmail,outlook,hotmail,etc.,).
-2. Once sender account is ready create an environmental variable for that account. (For security purpose)
-2. Create an excel with the list of mails which needs to validated.
-3. Once the code is executed, it will automatiaaly send the mail to the lists and then cools for particular time then open the mail box and
-  check all the existing mailboxes for the bounces and then returns the validated mail IDs.
-4. Finally cleans up the mail box and set for next execution.
+The process involves the following steps:
+
+The sender account must be set up before sending any emails. This account can be from any email provider (such as Gmail, Outlook, Hotmail, etc.).
+An environmental variable should be created for the sender account for security purposes.
+A list of email addresses to be validated should be added to an Excel sheet.
+Upon execution of the code, the tool will automatically send emails to the addresses listed in the Excel sheet and then wait for a specified amount of time. Afterward, it will open the email account and check for any hard bounces and return the validated email addresses.
+Finally, the tool will clean up the email account in preparation for the next execution.
